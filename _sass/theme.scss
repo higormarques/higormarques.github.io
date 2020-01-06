@@ -1,0 +1,16 @@
+body {
+    background-color: #1D2329;
+    font-family: 'Roboto';
+
+    * {
+        color: #fff;
+    }
+}
+
+body.light {
+    background-color: #fff;
+
+    * {
+        color: #1D2329;
+    }
+}

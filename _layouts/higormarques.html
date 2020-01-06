@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/main.css">
+    <title>{{ page.title }}</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="/" alt="página inicial" class="logo">
+                <h1>{{ site.title }}</h1>
+            </a>
+
+            <nav class="menu">
+                <a class="menu__link" href="/">Blog  ✍🏽</a>
+                <a class="menu__link"href="/about">Sobre mim  👨🏽‍💻</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="content-wrapper">
+            <aside class="category">
+                <h3>Categorias</h3>
+
+                <ul class="category__list">
+                    {% for category in site.categories %}
+                        <li class="category__item category-label category-label--{{ category[0] }}">
+                            <a class="category__anchor">
+                                {{ category[0]}}
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </aside>
+
+            <section class="posts">
+                {{ content }}
+            </section>
+        </div>
+    </div>
+</body>
+</html>

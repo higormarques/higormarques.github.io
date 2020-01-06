@@ -1,0 +1,15 @@
+.category-label {
+    display: inline-block;
+    margin-right: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 1rem;
+
+    &--CSS {
+        background-color: #B7B5E4;
+    }
+
+    &--Html {
+        background-color: #85BDBF;
+    }
+}
