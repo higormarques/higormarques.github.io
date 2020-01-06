@@ -11,9 +11,9 @@ title: Higor Marques - Blog
             <p class="posts__subtitle">{{ post.subtitle }}</p>
             <footer class="posts__footer">
                 <ul class="posts__categories">
-                    {% for category in site.categories %}
-                        <li class="posts__categories-item category-label category-label--{{ category[0] }}">
-                            {{ category[0]}}
+                    {% for category in post.categories %}
+                        <li class="posts__categories-item category-label category-label--{{ category }}">
+                            {{ category }}
                         </li>
                     {% endfor %}
                 </ul>
